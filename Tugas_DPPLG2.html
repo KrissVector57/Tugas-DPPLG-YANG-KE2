@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Nota Pembelian</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url(Vestia\ zeta\ Icon.jpg);
+        background-size:cover;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-container {
+        background-color: #aba9b986;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        color: #fff;
+        margin: 0 auto;
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="number"],
+      .form-group input[type="date"],
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 4px;
+      }
+      .pembayaran-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .pembayaran-group label {
+        margin-right: 5px; 
+      }
+
+      .pembayaran-group input[type="radio"] {
+        margin-right: 5px; 
+      }
+
+      .pembayaran-group input[type="text"] {
+        width: auto;
+        margin-left: 5px; 
+      }
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .button-group button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .button-clear {
+        background-color: #1bdb38;
+        color: #fff;
+      }
+      .button-send {
+        background-color: #1128db;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Formulir Nota Pembelian</h2>
+      <form>
+        <div class="form-group">
+          <label for="nama">Nama Pembeli</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda" />
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat Pembeli</label>
+          <input type="text" id="alamat" name="alamat" placeholder="Masukkan Alamat Anda"/>
+        </div>
+        <div class="form-group">
+          <label for="kode">Kode Pos</label>
+          <select id="kode" name="kode" placeholder="Masukkan Kode Pos Anda">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tanggal">Tanggal Beli</label>
+          <input type="date" id="tanggal" name="tanggal"/>
+        </div>
+        <div class="form-group">
+          <label>Pembayaran</label>
+          <div class="pembayaran-group">
+            <input type="radio" id="lunas" name="pembayaran" value="Lunas" />
+            <label for="lunas">Lunas</label>
+            <input type="radio" id="belum" name="pembayaran" value="Belum Lunas" />
+            <label for="belum">Belum Lunas</label>
+            <input type="radio" id="dp" name="pembayaran" value="DP" />
+            <label for="dp">DP</label>
+            <input type="text" name="dp2" id="dp2" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="jenis">Jenis Pembayaran</label>
+          <select id="jenis" name="jenis">
+            <option value="tunai">Tunai</option>
+            <option value="kredit">Kredit</option>
+            <option value="pay-later">Pay-Later</option>
+            <option value="e-banking">E-Banking</option>
+          </select>
+        </div>
+        <p class="menu-title">Menu</p>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <input type="checkbox" id="Ayam Bakar" name="pesanan">
+                    <label for="Ayam Bakar">Ayam Bakar Rp 30.000</label>
+                    <input type="number" placeholder="Jumlah" name="Ayam Bakar" id="Ayam Bakar">
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="nila bakar" name="pesanan">
+                    <label for="nila bakar">Nila Bakar Rp 25.000</label>
+                    <input type="number" placeholder="Jumlah" name="nila bakar" id="nila bakar">
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="Bebek bakar" name="pesanan">
+                    <label for="bebek bakar">Bebek Bakar Rp 35.000</label>
+                    <input type="number" placeholder="Jumlah" name="Bebek Bakar" id="Bebek Bakar">
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="Lele goreng" name="pesanan">
+                    <label for="lele goreng">Lele Goreng Rp 15.000</label>
+                    <input type="number" placeholder="Jumlah" name="lele goreng" id="lele goreng">
+                </div>
+            </div>
+        <div class="form-group">
+          <label for="harga">Harga</label>
+          <input type="number" id="harga" name="harga" placeholder="Masukkan harga" />
+        </div>
+        <div class="button-group">
+          <button type="reset" class="button-clear">Clear</button>
+          <button type="submit" class="button-send">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
